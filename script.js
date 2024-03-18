@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+/*document.addEventListener("DOMContentLoaded", function(){*/
 
 var circularSwitch = document.getElementById("circularSwitch");
 var switchContainer = document.getElementById("switchContainer");
@@ -69,9 +69,6 @@ document.getElementById("monthlyPlan").style.color="var(--Purplish_blue)";
          });
      
     
-
-
-
     
-});
+//});
 
