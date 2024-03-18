@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Vars.css">
+  
+  
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+	<div class="main-container">
+
+		<div class="left-pan">
+			<!-- <div class = "grid-container"> -->
+				<!-- <div class="grid-item"> 1 </div> -->
+				<!-- <div class="grid-item"> <a> STEP 1</a> </div> -->
+				<!-- <div class="grid-item"> 2 </div> -->
+				<!-- <div class="grid-item"> <a> STEP 2</a> </div> -->
+				<!-- <div class="grid-item"> 3 </div> -->
+				<!-- <div class="grid-item"> <a> STEP 3</a> </div> -->
+				<!-- <div class="grid-item"> 4 </div> -->
+				<!-- <div class="grid-item"> <a> STEP 4</a> </div> -->
+			<!-- </div> -->
+			<div class="left-pan-box left-pan-box-1"> 
+				<div class="number number-1"> <a> 1 </a></div>
+				<div class="text-box text-box-1"> 
+					<div class="text text-top text-top-1"> Step 1</div>
+					<div class="text text-down text-down-1"> your info</div>		
+				</div>			
+			</div>
+			
+			<div class="left-pan-box left-pan-box-2"> 
+				<div class="number number-2"> <a> 2 </a></div>
+				<div class="text-box text-box-2"> 
+					<div class="text text-top text-top-2"> Step 2</div>
+					<div class="text text-down text-down-2"> select plan</div>		
+				</div>			
+			</div>
+			
+			<div class="left-pan-box left-pan-box-3"> 
+				<div class="number number-3"> <a> 3 </a></div>
+				<div class="text-box text-box-3"> 
+					<div class="text text-top text-top-3"> Step 3</div>
+					<div class="text text-down text-down-3"> add-ons</div>		
+				</div>			
+			</div>
+			<div class="left-pan-box left-pan-box-4"> 
+				<div class="number number-4"> <a> 4 </a></div>
+				<div class="text-box text-box-4"> 
+					<div class="text text-top text-top-4"> Step 4</div>
+					<div class="text text-down text-down-4"> summary</div>		
+				</div>			
+			</div>
+			
+			
+			
+		</div>
+		<div class="right-pan">
+			<!-- step 1-->
+			<div data-step class="personal-info tab hidden">
+				<div class="form-heading">
+					<a class="main-topic"> Personal info</a>
+					<a class = "sub-topic">Please provide your name, email address,
+					and phone number.</a>		
+				</div> 
+				<div class="form-container">
+					<form class="form-personal-info"> 
+						<label for="fname"> Name </label>
+						<input type="text" id="fname" value="e.g.Stephen King" >
+						<label for="fmail"> Email Address </label>
+						<input type="text" id="fmail" value="e.g.stephenking@lorem.com" >
+						<label for="fnumber"> Phone Number </label>
+						<input type="text" id="fname" value="e.g. +1 234 567 890" >
+					</form>	
+				</div> 
+				<!-- <div class="btn-container"> 
+					<button class="next-btn"  > Next Step </button>
+					<button class="prev-btn"  > Previous Step </button>
+				</div> -->
+			</div>
+			<!-- step 2-->
+			<div class="plan-section no-active tab hidden">
+				<div class="form-heading">
+					<a class="main-topic"> Select your plan</a>
+					<a class = "sub-topic">You have the option of monthly or
+						yearly billing
+					</a>		
+				</div> 
+				<div class="card-section">
+					<div class="card card-1">
+						<img src="/assets/images/icon-arcade.svg">
+						<h5>Arcade</h5>
+						<h6>$9/mo</h6>
+					</div>
+					<div class="card card-2">
+						<img src="/assets/images/icon-advanced.svg">
+						<h5>Advanced</h5>
+						<h6>$12/mo</h6>
+					</div>
+					<div class="card card-3">
+						<img src="/assets/images/icon-pro.svg">
+						<h5>Pro</h5>
+						<h6>$15/mo</h6>
+					</div>
+				</div>
+				<div class="plan-selection">
+					<p id="monthlyPlan">Monthly</p>
+					<div class="circular-switch-container" id="switchContainer">
+						<div class="circular-switch" id="circularSwitch" onclick="toggleSwitch()"></div>
+					</div>
+					<p id="yearlyPlan">yearly</p>
+				</div>
+				<!-- <div class="btn-container"> 
+					<button class="next-btn"  > Next Step </button>
+					<button class="prev-btn"  > Previous Step </button>
+				</div> -->
+			</div>
+			<!-- step 3-->
+			<div class="pick-add-ons no-active tab hidden">
+				<div class="form-heading">
+					<a class="main-topic"> Pick add-ons</a>
+					<a class = "sub-topic">	 Add-ons help enhance your gaming experience</a>		
+				</div> 
+				<div class="add-on-services">
+					<div class="online-service card-services">
+						<div> <input type="checkbox"></div>
+						<div class="service-details"><h5>Online service</h5> <h6>Access to multiplayer games</h6></div>
+						<div><h4>+$1/mo</h4></div>
+					</div>
+					<div class="large-storage card-services"">
+						<div> <input type="checkbox"></div>
+						<div class="service-details"><h5>Large storage</h5> <h6>Extra 1TB of cloud storage</h6></div>
+						<div><h4>+$2/mo</h4></div>
+					</div>
+					<div class="customize-profile card-services"">
+						<div> <input type="checkbox"></div>
+						<div class="service-details"><h5>Customizable Profile<h5> <h6>Custom theme on your profile</h6></div>
+						<div><h4>+$2/mo</h4></div>
+					</div>	
+				</div>
+				
+			</div>
+			<div class="btn-container btn-in-step-3"> 
+				<button class="next-btn" id="next-btn"  > Next Step </button>
+				<button class="prev-btn hidden" id="prev-btn" > Back </button>
+			</div>
+			
+		</div>
+
+
+	</div>
+<script src="/script.js"></script>
+</body>
+</html>
